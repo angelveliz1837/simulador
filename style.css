@@ -1,0 +1,533 @@
+.navegador{
+    display: grid;
+    grid-template-columns: 10% 10% 5% 50% 5% 5% 5% 5% 5%;
+    background-color: blue;
+    padding: 0em 1em;
+    color: white;
+}
+
+.navegador_documento{
+    align-content: center;
+}
+
+.navegador_documento_extra{
+    display: flex;
+    flex-direction: column;
+}
+
+.navegador_dni_numero{
+    align-content: center;
+    text-align: center;
+    background-color: rgb(26, 63, 94);
+}
+
+.navegador_icono_buscar{
+    align-content: center;
+    text-align: center;
+}
+
+.navegador_icono_buscar img{
+    width: 36px;
+}
+
+.navegador_detalle{
+    align-content: center;
+    text-align: center;
+}
+
+.navegador_detalle_texto{
+    border: 1px solid white;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+.navegador_tiempo{
+    align-content: center;
+    text-align: center;
+}
+
+.navegador_candado{
+    align-content: center;
+    text-align: center;
+}
+
+.navegador_candado img{
+    width: 24px;
+}
+
+.navegador_actualizar{
+    align-content: center;
+    text-align: center;
+}
+
+.navegador_actualizar img{
+    width: 24px;
+}
+
+.navegador_icono_logo{
+    align-content: center;
+    text-align: center;
+}
+
+.navegador_tipificar{
+    align-content: center;
+    text-align: center;
+}
+
+.navegador_tipificar img{
+    width: 24px;
+}
+
+
+.cajas{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.cajas_caja{
+    border: 2px solid darkgray;
+    margin: 1em;
+}
+
+.cajas_caja_personal{
+    display: flex;
+    flex-direction: column;
+}
+
+.cajas_caja_personal_dato{
+    border: 3px solid blue;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.cajas_caja_personal_dato_titulo{
+    background-color: blue;
+}
+
+.cajas_caja_personal_dato_titulo h1{
+    margin: 0em;
+    padding: 0em 1em;
+    color: white;
+}
+
+.cajas_caja_personal_dato_contenido{
+    display: grid;
+    grid-template-columns: 15% 45% 25% 15%;
+}
+
+.cajas_caja_personal_dato_contenido_icono{  
+    display: flex;
+    flex-direction: column;
+}
+
+.cajas_caja_personal_dato_contenido_icono_persona{
+    text-align: center;
+}
+
+.cajas_caja_personal_dato_contenido_icono_estrella{
+    text-align: center;
+}
+
+.cajas_caja_personal_dato_contenido_detalle1 h3{
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.cajas_caja_personal_dato_contenido_detalle2 h3{
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.cajas_caja_personal_dato_contenido_boton_texto{
+    background-color: blue;
+    color: white;
+    margin: 1em;
+    padding: 0.2em 1em;
+    border-radius: 10px;
+}
+
+.cajas_caja_personal_contacto{
+    border: 3px solid blue;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.cajas_caja_personal_contacto_titulo{
+    background-color: blue;
+}
+
+.cajas_caja_personal_contacto_titulo h1{
+    margin: 0em;
+    padding: 0em 1em;
+    color: white;
+}
+
+.cajas_caja_personal_contacto_direccion{
+    padding: 1em;
+}
+
+.cajas_caja_personal_contacto_telefono{
+    padding: 0em 1em 1em 1em;
+}
+
+.cajas_caja_personal_historial{
+    border: 3px solid blue;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.cajas_caja_personal_historial_titulo{
+    background-color: blue;
+}
+
+.cajas_caja_personal_historial_titulo h1{
+    margin: 0em;
+    padding: 0em 1em;
+    color: white;
+}
+
+.cajas_caja_personal_historial_dia{
+    padding: 1em;
+}
+
+.cajas_caja_navegador{
+    display: flex;
+    flex-direction: row;
+}
+
+.cajas_caja_navegador_informacion{
+    padding: 0.5em 1em;
+    margin: 0em 0.1em;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    font-size: 0.75em;
+    background-color: gray;
+}
+
+.cajas_caja_navegador_interno{
+    display: flex;
+    flex-direction: row;
+    padding: 0em 1em;
+}
+
+.cajas_caja_navegador_interno_informacion{
+    padding: 0.5em 0em;
+    margin: 0em 0.1em;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+.cajas_caja_navegador_interno_informacion_abierto{
+    width: 36px;
+}
+
+.cajas_caja_navegador_interno_detalle{
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+    padding: 1em;
+}
+
+.cajas_caja_navegador_interno_detalle_datos_tarjeta{
+    color: blue;
+}
+
+.cajas_caja_navegador_interno_detalle_datos_bloqueo{
+    color:darkorange;
+}
+
+.cajas_caja_navegador_interno_detalle_activacion_estado{
+    color: green;
+}
+
+.cajas_caja_navegador_interno_detalle_boton_enlazar{
+    background-color: blue;
+    color: white;
+    padding: 0.2em 1em;
+    border-radius: 10px;
+}
+
+.cajas_caja_credito{
+    border: 3px solid blue;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.cajas_caja_credito_titulo{
+    background-color: blue;
+}
+
+.cajas_caja_credito_titulo h1{
+    margin: 0em;
+    padding: 0em 1em;
+    color: white;
+}
+
+.cajas_caja_credito_principal{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 1em;
+}
+
+.cajas_caja_credito_principal_boton{
+    text-align: end;
+
+}
+
+.cajas_caja_credito_principal_boton_menu{
+    background-color: blue;
+    display: inline-block;
+    padding: 0.2em 1em;
+    border-radius: 10px;
+    color: white;
+}
+
+.cajas_caja_credito_datos{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 1em;
+}
+
+.cajas_caja_credito_datos_bloque1{
+    color: blue;
+}
+
+.cajas_caja_credito_dato_bloque3{
+    color: blue;
+}
+
+.cajas_caja_credito_resultado{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 1em;
+}
+
+.cajas_caja_credito_resultado_bloque1{
+    color: blue;
+    background-color: rgb(65, 175, 211);
+}
+
+.cajas_caja_credito_resultado_bloque2{
+    background-color: lightblue;
+    text-align: end;
+}
+
+.cajas_caja_credito_datos_extra{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 1em;
+}
+
+.cajas_caja_credito_datos_extra_soles{
+    text-align: end;
+}
+
+.cajas_caja_credito_datos_extra_dolares{
+    text-align: end;
+}
+
+.cajas_caja_credito_respuesta{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 1em;
+}
+
+.cajas_caja_credito_respuesta_bloque1{
+    text-align: start;
+    color: blue;
+    background-color: rgb(65, 175, 211);
+}
+
+.cajas_caja_credito_respuesta_bloque2{
+    text-align: end;
+    background-color: lightblue;
+}
+
+.cajas_caja_credito_respuesta_bloque3{
+    text-align: end;
+    background-color: lightblue;
+}
+
+.cajas_caja_bloqueo{
+    border: 3px solid blue;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.cajas_caja_bloqueo_titulo{
+    background-color: blue;
+}
+
+.cajas_caja_bloqueo_titulo h1{
+    margin: 0em;
+    padding: 0em 1em;
+    color: white;
+}
+
+.cajas_caja_bloqueo_datos{
+    display: grid;
+    grid-template-columns: 30% 20% 25% 25%;
+    padding: 1em;
+}
+
+.cajas_caja_bloqueo_bloque1{
+    color: blue;
+}
+
+.cajas_caja_bloqueo_bloque3{
+    color: blue;
+}
+
+.cajas_caja_bloqueo_tipo{
+    margin: 1em;
+    background-color: darkgray;
+    padding: 1em;
+}
+
+.cajas_caja_bloqueo_reposicion{
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+
+.cajas_caja_bloqueo_reposicion div{
+    align-content: center;
+}
+
+.cajas_caja_bloqueo_reposicion_checkout img{
+    width: 36px;
+    padding: 0em 1em;
+}
+
+.cajas_caja_bloqueo_boton{
+    text-align: center;
+}
+
+.cajas_caja_bloqueo_boton_bloquear{
+    display: inline-block;
+    background-color: blue;
+    padding: 0.5em;
+    margin: 1em;
+    border-radius: 10px;
+    color: white;
+}
+
+.cajas_caja_contrato{
+    border: 3px solid blue;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.cajas_caja_contrato_titulo{
+    background-color: blue;
+}
+
+.cajas_caja_contrato_titulo h1{
+    margin: 0em;
+    padding: 0em 1em;
+    color: white;
+}
+
+.cajas_caja_contrato_detalle{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 1em;
+}
+
+.cajas_caja_contrato_detalle_bloque1{
+    color: blue;
+}
+
+.cajas_caja_contrato_resultado{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 1em;
+}
+
+.cajas_caja_contrato_resultado_bloque1{
+    color: blue;
+    background-color: rgb(65, 175, 211);
+}
+
+.cajas_caja_contrato_detalle_bloque3{
+    text-align: end;
+}
+
+.cajas_caja_contrato_detalle_bloque3_boton{
+    background-color: blue;
+    display: inline-block;
+    padding: 0.2em 1em;
+    border-radius: 10px;
+    color: white;
+}
+
+.cajas_caja_contrato_resultado_bloque2{
+    background-color: lightblue;
+    text-align: end;
+}
+
+.cajas_caja_correo_constancia{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid blue;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.cajas_caja_correo_constancia_titulo{
+    background-color: blue;
+}
+
+.cajas_caja_correo_constancia_titulo h1{
+    margin: 0em;
+    padding: 0em 1em;
+    color: white;
+}
+
+.cajas_caja_correo_constancia_detalle{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 1em;
+}
+
+.cajas_caja_correo_constancia_detalle_bloque1{
+    color: blue;
+}
+
+.cajas_caja_correo_constancia_detalle_bloque3{
+    color: blue;
+}
+
+.cajas_caja_correo_envio{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid blue;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.cajas_caja_correo_envio_titulo{
+    background-color: blue;
+}
+
+.cajas_caja_correo_envio_titulo h1{
+    margin: 0em;
+    padding: 0em 1em;
+    color: white;
+}
+
+.cajas_caja_correo_envio_contenido{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 1em;
+}
+
+.cajas_caja_correo_envio_contenido_boton_enviar{
+    background-color: blue;
+    color: white;
+    display: inline-block;
+    padding: 0.2em 1em;
+    border-radius: 10px;
+}
