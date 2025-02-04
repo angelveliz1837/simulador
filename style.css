@@ -253,6 +253,7 @@
     border: 3px solid blue;
     margin: 1em;
     border-radius: 10px;
+    display: none;
 }
 
 .cajas_caja_credito_titulo{
@@ -354,6 +355,7 @@
     border: 3px solid blue;
     margin: 1em;
     border-radius: 10px;
+    display: none;
 }
 
 .cajas_caja_bloqueo_titulo{
@@ -418,6 +420,7 @@
     border: 3px solid blue;
     margin: 1em;
     border-radius: 10px;
+    display: none;
 }
 
 .cajas_caja_contrato_titulo{
@@ -466,6 +469,10 @@
 .cajas_caja_contrato_resultado_bloque2{
     background-color: lightblue;
     text-align: end;
+}
+
+.cajas_caja_correo{
+    display: none;
 }
 
 .cajas_caja_correo_constancia{
@@ -532,11 +539,24 @@
     border-radius: 10px;
 }
 
+.autenticar {
+    position: fixed; /* Para cubrir toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad */
+    display: none; /* Inicialmente oculta */
+    z-index: 9999; /* Asegura que esté encima de otros elementos */
+    justify-content: center;
+    align-items: center;
+}
+
 .autenticar_detalle{
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: red;
+    background-color: white;
     margin: 5em;
 }
 
@@ -568,10 +588,23 @@
     padding: 4em;
 }
 
+.tarjeta {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none; /* Inicialmente oculta */
+    z-index: 10000; 
+    justify-content: center;
+    align-items: center;
+}
+
 .tarjeta_opcion{
     display: flex;
     flex-direction: column;
-    background-color: red;
+    background-color: white;
     margin: 5em;
 }
 
@@ -617,4 +650,234 @@
     padding: 0.2em 1em;
     border-radius: 10px;
 }
+
+.pregunta {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none; /* Inicialmente oculta */
+    z-index: 10000; 
+    justify-content: center;
+    align-items: center;
+}
+
+.pregunta_contenido{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 5em;
+}
+
+.pregunta_contenido_titulo{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding: 1em;
+}
+
+.pregunta_contenido_detalle{
+    display: grid;
+    grid-template-columns: 20% 10% 10% 10% 10% 10% 10% 10% 10%;
+    padding: 2em;
+    background-color: lightgray;
+}
+
+.pregunta_contenido_detalle_imagen {
+    text-align: end;
+}
+
+.pregunta_contenido_detalle_imagen img{
+    padding-right: 1em;
+}
+
+.pregunta_contenido_detalle_boton{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: white;
+}
+
+.pregunta_contenido_detalle_boton_negacion{
+    text-align: end;
+}
+
+.pregunta_contenido_detalle_boton_negacion_no{
+    background-color: blue;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 0.5em 2.5em;
+    margin: 0.5em;
+}
+
+.pregunta_contenido_detalle_boton_autenticar_si{
+    background-color: blue;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+}
+
+.confirmacion_contenido{
+    background-color: red;
+    margin: 5em;
+}
+
+.confirmacion_contenido_dato{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding: 1em;
+}
+
+.confirmacion_contenido_dato div{
+    align-content: center;
+}
+
+.acepbloqueo_contenido{
+    display: flex;
+    flex-direction: column;
+    margin: 5em;
+    text-align: center;
+    background-color: red;
+}
+
+.acepbloqueo_contenido_cerrar{
+    text-align: end;
+}
+
+.acepbloqueo_contenido_titulo{
+    padding: 1em;
+    color: blue;
+}
+
+.acepbloqueo_contenido_texto{
+    padding: 1em;
+}
+
+.acepbloqueo_contenido_texto_boton{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: white;
+}
+
+.acepbloqueo_contenido_texto_boton_negacion{
+    text-align: end;
+}
+
+.acepbloqueo_contenido_texto_boton_negacion_no{
+    background-color: blue;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 0.5em 2.5em;
+    margin: 0.5em;
+}
+
+.acepbloqueo_contenido_texto_boton_afirmacion{
+    text-align: start;
+}
+
+.acepbloqueo_contenido_texto_boton_afirmacion_si{
+    background-color: blue;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 0.5em 2.5em;
+    margin: 0.5em;
+}
+
+/***************************************************/
+.navegador_documento_extra {
+    position: relative;
+    display: inline-block;
+    width: 120px; /* Ajusta el ancho */
+}
+
+.navegador_documento_extra_dni,
+#comboDocumento {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    border: none;
+}
+
+#comboDocumento {
+    position: absolute;
+    top: 0;
+    left: 0;
+    appearance: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/***************************************************/
+.cajas_caja_personal_dato_contenido_boton_texto .digitales {
+    display: none;  /* Oculta el contenido por defecto */
+}
+
+.cajas_caja_personal_dato_contenido_boton_texto .mostrar {
+    display: block; /* Lo muestra cuando se le añade la clase .mostrar */
+}
+
+
+
+/***************************************************/
+
+.cajas_caja_navegador_interno_detalle_boton_enlazar .detalles,
+.cajas_caja_navegador_interno_detalle_boton_enlazar .bloqueos,
+.cajas_caja_navegador_interno_detalle_boton_enlazar .movimientos {
+    display: none;
+}
+
+.cajas_caja_navegador_interno_detalle_boton_enlazar .mostrar {
+    display: block;
+}
+
+/****************************************************/
+
+.cajas_caja_bloqueo_tipo {
+    position: relative;
+}
+
+.lista_bloqueos {
+    display: none;  /* La lista está oculta por defecto */
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 100%;
+    z-index: 10;
+}
+
+.cajas_caja_bloqueo_tipo div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.cajas_caja_bloqueo_tipo .seleccion_bloqueo {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.cajas_caja_bloqueo_tipo .seleccion_bloqueo:hover,
+.cajas_caja_bloqueo_tipo div:hover {
+    background-color: #e0e0e0;
+}
+
+.lista_bloqueos div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.lista_bloqueos div:hover {
+    background-color: #f5f5f5;
+}
+
+
+/******************************************************/
 
