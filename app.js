@@ -185,8 +185,6 @@ function bloquear() {
     }
 }
 
-
-
 /************************************* */
 
 // Función para mostrar/ocultar la sección de autenticación
@@ -244,17 +242,135 @@ function mostrarAutenticar() {
         autenticar.style.display = "none";  // Ocultar la sección autenticar
     }
 
-    // Asignar eventos
-    document.querySelector('.navegador_candado').addEventListener('click', mostrarAutenticar);
-    document.querySelector('.autenticar_detalle_cerrar').addEventListener('click', cerrarAutenticar);
-    document.querySelector('.autenticar_detalle_opcion_flujo').addEventListener('click', mostrarTarjeta);
-    document.querySelector('.autenticar_detalle_opcion_pregunta').addEventListener('click', mostrarPregunta); // Aquí es donde ocurre el problema
-    document.querySelector('.tarjeta_opcion_cerrar').addEventListener('click', cerrarTarjeta);
-    document.querySelector('.tarjeta_opcion_detalle_texto_boton_validar').addEventListener('click', validarTarjeta);
 
-    document.querySelector('.pregunta_contenido_titulo_cerrar').addEventListener('click', cerrarPregunta);
-    document.querySelector('.pregunta_contenido_detalle_boton_negacion_no').addEventListener('click', cerrarPregunta);
-    document.querySelector('.pregunta_contenido_detalle_boton_autenticar_si').addEventListener('click', validarAutenticar);
+/****************** FUNCIONES DE VALIDACIÓN Y CIERRE*/
+
+// Función para cerrar la sección acepbloqueo
+function cerrarBloqueo() {
+    const acepbloqueo = document.querySelector('.acepbloqueo');
+    if (acepbloqueo) acepbloqueo.style.display = "none";
+}
+
+// Función para mostrar la sección bloqueo
+function validarBloqueo() {
+    const seleccion = document.querySelector('.seleccion_bloqueo').textContent.trim();
+    if (seleccion !== "RAZÓN DE BLOQUEO") {
+        const bloqueo = document.querySelector('.acepbloqueo');
+        if (bloqueo) bloqueo.style.display = "flex";
+    } else {
+        alert("Debes seleccionar una razón de bloqueo antes de continuar.");
+    }
+}
+
+// Función para mostrar la opción afirmativa en bloqueo
+function validarBloqueoSi() {
+    const bloqueoSi = document.querySelector('.cajas_caja_correo');
+    if (bloqueoSi) bloqueoSi.style.display = "block";
+    const bloqueo = document.querySelector('.acepbloqueo');
+    if (bloqueo) bloqueo.style.display = "none";
+    const bloqueoCaja = document.querySelector('.cajas_caja_bloqueo');
+    if (bloqueoCaja) bloqueoCaja.style.display = "none";
+}
+
+// Función para ocultar la sección acepbloqueo al negar bloqueo
+function validarBloqueoNo() {
+    const bloqueoNo = document.querySelector('.acepbloqueo');
+    if (bloqueoNo) bloqueoNo.style.display = "none";
+}
+
+// Función para cerrar la sección confirmación
+function cerrarConfirmacion() {
+    const confirmacion = document.querySelector('.confirmacion');
+    if (confirmacion) confirmacion.style.display = "none";
+}
+
+// Función para mostrar la sección confirmación
+function validarEnvio() {
+    const confirmacion = document.querySelector('.confirmacion');
+    if (confirmacion) confirmacion.style.display = "flex";
+}
+
+// Función para alternar la autenticación
+function mostrarAutenticar() {
+    const autenticar = document.querySelector('.autenticar');
+    if (autenticar) autenticar.style.display = "flex";
+}
+
+// Función para cerrar autenticación
+function cerrarAutenticar() {
+    const autenticar = document.querySelector('.autenticar');
+    if (autenticar) autenticar.style.display = "none";
+}
+
+// Función para mostrar la tarjeta
+function mostrarTarjeta() {
+    const tarjeta = document.querySelector('.tarjeta');
+    if (tarjeta) tarjeta.style.display = "flex";
+}
+
+// Función para cerrar la tarjeta
+function cerrarTarjeta() {
+    const tarjeta = document.querySelector('.tarjeta');
+    if (tarjeta) tarjeta.style.display = "none";
+}
+
+// Función para mostrar la pregunta
+function mostrarPregunta() {
+    const pregunta = document.querySelector('.pregunta');
+    if (pregunta) pregunta.style.display = "flex";
+}
+
+// Función para cerrar la pregunta
+function cerrarPregunta() {
+    const pregunta = document.querySelector('.pregunta');
+    if (pregunta) pregunta.style.display = "none";
+}
+
+// Función para validar autenticación y ocultar pregunta/autenticación
+function validarAutenticar() {
+    const pregunta = document.querySelector('.pregunta');
+    if (pregunta) pregunta.style.display = "none";
+
+    const autenticar = document.querySelector('.autenticar');
+    if (autenticar) autenticar.style.display = "none";
+}
+
+// Función para validar tarjeta y ocultarla junto con autenticación
+function validarTarjeta() {
+    const tarjeta = document.querySelector('.tarjeta');
+    if (tarjeta) tarjeta.style.display = "none";
+
+    const autenticar = document.querySelector('.autenticar');
+    if (autenticar) autenticar.style.display = "none";
+}
+
+/****************** ASIGNACIÓN DE EVENTOS ******************/
+
+document.querySelector('.acepbloqueo_contenido_texto_boton_negacion_no')?.addEventListener('click', validarBloqueoNo);
+document.querySelector('.acepbloqueo_contenido_texto_boton_afirmacion_si')?.addEventListener('click', validarBloqueoSi);
+document.querySelector('.cajas_caja_bloqueo_boton_bloquear')?.addEventListener('click', validarBloqueo);
+document.querySelector('.navegador_candado')?.addEventListener('click', mostrarAutenticar);
+document.querySelector('.autenticar_detalle_cerrar')?.addEventListener('click', cerrarAutenticar);
+document.querySelector('.autenticar_detalle_opcion_flujo')?.addEventListener('click', mostrarTarjeta);
+document.querySelector('.autenticar_detalle_opcion_pregunta')?.addEventListener('click', mostrarPregunta);
+document.querySelector('.tarjeta_opcion_cerrar')?.addEventListener('click', cerrarTarjeta);
+document.querySelector('.tarjeta_opcion_detalle_texto_boton_validar')?.addEventListener('click', validarTarjeta);
+document.querySelector('.pregunta_contenido_titulo_cerrar')?.addEventListener('click', cerrarPregunta);
+document.querySelector('.pregunta_contenido_detalle_boton_negacion_no')?.addEventListener('click', cerrarPregunta);
+document.querySelector('.pregunta_contenido_detalle_boton_autenticar_si')?.addEventListener('click', validarAutenticar);
+document.querySelector('.confirmacion_contenido_dato_icono')?.addEventListener('click', cerrarConfirmacion);
+document.querySelector('.cajas_caja_correo_envio_contenido_boton_enviar')?.addEventListener('click', validarEnvio);
+document.querySelector('.acepbloqueo_contenido_cerrar')?.addEventListener('click', cerrarBloqueo);
+
+function seleccionarOpcion(element) {
+    document.querySelector('.seleccion_bloqueo').textContent = element.textContent;
+    document.querySelector('.lista_bloqueos').style.display = "none"; // Oculta la lista después de la selección
+}
+
+function toggleLista() {
+    const lista = document.querySelector('.lista_bloqueos');
+    lista.style.display = lista.style.display === "none" || lista.style.display === "" ? "block" : "none";
+}
 
 /************************************* */
 
