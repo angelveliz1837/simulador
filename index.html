@@ -78,7 +78,7 @@
                         <div class="cajas_caja_personal_dato_contenido_boton">
                             <div class="cajas_caja_personal_dato_contenido_boton_texto">
                                 <div class="quiero1" onclick="toggleContenido()">Quiero</div>
-                                <div class="digitales">Canales Digitales</div>
+                                <div class="digitales" onclick="mostrarCanalesDigitales()">Canales Digitales</div>
                             </div>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                         <div class="quiero2" onclick="mostrarOpciones()">Quiero</div>
                         <div class="detalles" onclick="mostrarDetalle()">Detalles</div>
                         <div class="bloqueos" onclick="mostrarBloqueo()">Bloqueos</div>
-                        <div class="movimientos">Movimientos</div>
+                        <div class="movimientos" onclick="mostrarMovimiento()">Movimientos</div>
                     </div>
                 </div>
             </div>
@@ -392,6 +392,100 @@
                         <div class="cajas_caja_correo_envio_contenido_boton">
                             <div class="cajas_caja_correo_envio_contenido_boton_enviar">Enviar</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cajas_caja">
+            <div id="cajas_caja_canal" class="cajas_caja_canal">
+                <div class="cajas_caja_canal_titulo">
+                    <h1>CANALES DIGITALES Y MECANISMOS DE SEGURIDAD</h1>
+                </div>
+                <div class="cajas_caja_canal_detalle">
+                    <div class="cajas_caja_canal_detalle_cuenta">
+                        <div class="cajas_caja_canal_detalle_cuenta_texto">
+                            <img src="image/icono_banca.png">
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto">
+                            BANCA MOVIL E INTERNET
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto inactivo_banca">
+                            Inactivo
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto bloqueado_banca">
+                            Bloqueado
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto activo_banca">
+                            Activo
+                        </div>
+                    </div>
+                    <div class="cajas_caja_canal_detalle_cuenta">
+                        <div class="cajas_caja_canal_detalle_cuenta_texto">
+                            <img src="image/icono_huella.png">
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto">
+                            TOKEN DIGITAL
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto inactivo_token">
+                            Inactivo
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto activo_token">
+                            Activo
+                        </div>
+                    </div>
+                    <div class="cajas_caja_canal_detalle_cuenta">
+                        <div class="cajas_caja_canal_detalle_cuenta_texto">
+                            <img src="image/icono_mensaje.png">
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto">
+                            CLAVE SMS
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto inactivo_clave">
+                            Inactivo
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto activo_clave">
+                            Activo
+                        </div>
+                    </div>
+                    <div class="cajas_caja_canal_detalle_cuenta">
+                        <div class="cajas_caja_canal_detalle_cuenta_texto">
+                            <img src="image/icono_banca.png">
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto">
+                            TARJETAS DE COORDENADAS
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto inactivo_tarjeta">
+                            Inactivo
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto bloqueado_tarjeta">
+                            Bloqueado
+                        </div>
+                        <div class="cajas_caja_canal_detalle_cuenta_texto activo_tarjeta">
+                            Activo
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cajas_caja">
+            <div id="cajas_caja_movimiento" class="cajas_caja_movimiento">
+                <div class="cajas_caja_movimiento_titulo">
+                    <div class="cajas_caja_movimiento_titulo_mov">
+                        Movimientos
+                    </div>
+                    <div class="cajas_caja_movimiento_titulo_ret">
+                        Retenciones
+                    </div>
+                </div>
+                <div class="cajas_caja_movimiento_lista">
+                    <div class="cajas_caja_movimiento_lista_texto">
+                        01/01/2022
+                    </div>
+                    <div class="cajas_caja_movimiento_lista_texto">
+                        MANUEL
+                    </div>
+                    <div class="cajas_caja_movimiento_lista_texto">
+                        - S/ 270.00
                     </div>
                 </div>
             </div>

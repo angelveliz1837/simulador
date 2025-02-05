@@ -840,6 +840,117 @@
     text-align: center;
 }
 
+.cajas_caja_canal{
+    border: 3px solid blue;
+    margin: 1em;
+    border-radius: 10px;
+    display: none;
+}
+
+.cajas_caja_canal_titulo{
+    background-color: blue;
+}
+
+.cajas_caja_canal_titulo h1{
+    margin: 0em;
+    padding: 0em 1em;
+    color: white;
+}
+
+.cajas_caja_canal_detalle{
+    padding: 1em;
+}
+
+.cajas_caja_canal_detalle_cuenta{
+    display: grid;
+    grid-template-columns: 10% 30% 20% 20% 20%;
+}
+
+.cajas_caja_canal_detalle_cuenta_texto{
+    text-align: center;
+    align-content: center;
+    margin: 0.1em;
+}
+
+.inactivo_banca{
+    background-color: rgb(202, 202, 202);
+    color: blue;
+}
+
+.bloqueado_banca{
+    background-color: white;
+    color: lightblue;
+}
+
+.activo_banca{
+    background-color: blue;
+    color: white;
+}
+
+.inactivo_token{
+    background-color: rgb(202, 202, 202);
+    color: blue;
+}
+
+.activo_token{
+    background-color: blue;
+    color: white;
+}
+
+.inactivo_clave{
+    background-color: rgb(202, 202, 202);
+    color: blue;
+}
+
+.activo_clave{
+    background-color: blue;
+    color: white;
+}
+
+.inactivo_tarjeta{
+    background-color: rgb(202, 202, 202);
+    color: blue;
+}
+
+.bloqueado_tarjeta{
+    background-color: white;
+    color: lightblue;
+}
+
+.activo_tarjeta{
+    background-color: white;
+    color: lightblue;
+}
+
+.cajas_caja_movimiento{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    display: none;
+}
+
+.cajas_caja_movimiento_titulo{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+
+.cajas_caja_movimiento_titulo_mov{
+    padding: 1em;
+    background-color: lightblue;
+}
+
+.cajas_caja_movimiento_titulo_ret{
+    padding: 1em;
+    background-color: gray;
+}
+
+.cajas_caja_movimiento_lista{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    padding: 1.5em;
+}
+
 /***************************************************/
 .navegador_documento_extra {
     position: relative;

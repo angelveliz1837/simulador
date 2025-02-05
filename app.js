@@ -115,6 +115,50 @@ function mostrarBloqueo() {
     }
 }
 
+function mostrarMovimiento() {
+    const cajaMovimiento = document.getElementById("cajas_caja_movimiento");
+    const opcion1 = document.querySelectorAll('.detalles');
+    const opcion2 = document.querySelectorAll('.bloqueos');
+    const opcion3 = document.querySelectorAll('.movimientos');
+
+    // Alternar entre mostrar y ocultar el contenido con display: grid
+    if (cajaMovimiento.style.display === "none" || cajaMovimiento.style.display === "") {
+        cajaMovimiento.style.display = "block";  // Muestra el contenido como una cuadrícula
+        
+        // Ocultar las otras opciones
+        opcion1.forEach(opcion => {
+            opcion.style.display = "none"; // Ocultar Detalles
+        });
+
+        opcion2.forEach(opcion => {
+            opcion.style.display = "none"; // Ocultar Bloqueos
+        });
+
+        opcion3.forEach(opcion => {
+            opcion.style.display = "none"; // Ocultar Movimientos
+        });
+    } else {
+        cajaMovimiento.style.display = "none";  // Ocultar el contenido
+    }
+}
+
+function mostrarCanalesDigitales() {
+    const cajaCanal = document.getElementById("cajas_caja_canal");
+    const opcion1 = document.querySelectorAll('.digitales');
+
+    // Alternar entre mostrar y ocultar el contenido con display: grid
+    if (cajaCanal.style.display === "none" || cajaCanal.style.display === "") {
+        cajaCanal.style.display = "block";  // Muestra el contenido como una cuadrícula
+        
+        // Ocultar las otras opciones
+        opcion1.forEach(opcion => {
+            opcion.style.display = "none"; // Ocultar Detalles
+        });
+        
+    } else {
+        cajaCanal.style.display = "none";  // Ocultar el contenido
+    }
+}
 
 /**************************************** */
 
@@ -344,6 +388,7 @@ function validarTarjeta() {
     if (autenticar) autenticar.style.display = "none";
 }
 
+
 /****************** ASIGNACIÓN DE EVENTOS ******************/
 
 document.querySelector('.acepbloqueo_contenido_texto_boton_negacion_no')?.addEventListener('click', validarBloqueoNo);
@@ -387,6 +432,59 @@ iconos.forEach(icono => {
         
         // Cambiar la imagen del icono clickeado a 'cerrado'
         icono.src = 'image/icono_cerrado.png';  // Establecer la imagen como cerrada
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const inactivo = document.querySelector(".inactivo_banca");
+    const activo = document.querySelector(".activo_banca");
+
+    inactivo.addEventListener("click", function() {
+        inactivo.style.backgroundColor = "blue";
+        inactivo.style.color = "white";
+        activo.style.backgroundColor = "rgb(202, 202, 202)";
+        activo.style.color = "blue";
+    });
+
+    activo.addEventListener("click", function() {
+        activo.style.backgroundColor = "blue";
+        activo.style.color = "white";
+        inactivo.style.backgroundColor = "rgb(202, 202, 202)";
+        inactivo.style.color = "blue";
+    });
+
+    const inactivo2 = document.querySelector(".inactivo_token");
+    const activo2 = document.querySelector(".activo_token");
+
+    inactivo2.addEventListener("click", function() {
+        inactivo2.style.backgroundColor = "blue";
+        inactivo2.style.color = "white";
+        activo2.style.backgroundColor = "rgb(202, 202, 202)";
+        activo2.style.color = "blue";
+    });
+
+    activo2.addEventListener("click", function() {
+        activo2.style.backgroundColor = "blue";
+        activo2.style.color = "white";
+        inactivo2.style.backgroundColor = "rgb(202, 202, 202)";
+        inactivo2.style.color = "blue";
+    });
+
+    const inactivo3 = document.querySelector(".inactivo_clave");
+    const activo3 = document.querySelector(".activo_clave");
+
+    inactivo3.addEventListener("click", function() {
+        inactivo3.style.backgroundColor = "blue";
+        inactivo3.style.color = "white";
+        activo3.style.backgroundColor = "rgb(202, 202, 202)";
+        activo3.style.color = "blue";
+    });
+
+    activo3.addEventListener("click", function() {
+        activo3.style.backgroundColor = "blue";
+        activo3.style.color = "white";
+        inactivo3.style.backgroundColor = "rgb(202, 202, 202)";
+        inactivo3.style.color = "blue";
     });
 });
 
