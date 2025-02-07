@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleemu.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="emulador">
+        <div class="emulador_barra"></div>
+        <div class="emulador_texto">
+            <p>
+                Se comunica que a partir del 7 de Setiembre de 2009 ha cambiado la transaccion QSAP de reinicio y
+                desbloqueado de contrasenias en Altamira/hacer. Recordemos que debemos utilizar la transaccion QSAP o
+                QSAD cuando nuestra clave se encuentra bloqueada, revocada o cuando regresemos de vacaciones (Guia NOR.
+                GP.130).
+                <br>
+                En caso de necesitar soporte, este debera canalizarse a traves de la Mesa de Ayuda al anexo 1222
+            </p>
+        </div>
+        <div class="emulador_titulo">
+            <div class="emulador_titulo_texto">
+                <div>Opcion</div>
+                <div>Descripcion</div>
+                <div>Aplicacion</div>
+            </div>
+            <div class="emulador_titulo_cuadro">
+                <div class="emulador_titulo_cuadro_alternativas">
+                    <div id="a">A ====></div>
+                    <div id="b">B ====></div>
+                    <div id="c">C ====></div>
+                    <div id="d">D ====></div>
+                    <div id="f">F ====></div>
+                    <div id="s">S ====></div>
+                </div>
+                <div class="emulador_titulo_cuadro_descripcion">
+                    <div>Teleproceso en agencias</div>
+                    <div>CICS de Stand-in</div>
+                    <div>Ambiente de PRODUCCION Altamira</div>
+                    <div>Distribucion de reportes</div>
+                    <div>Ambiente FORMACION Altamira</div>
+                    <div>Centro de Informacion</div>
+                </div>
+                <div class="emulador_titulo_cuadro_siglas">
+                    <div>(CICSTP)</div>
+                    <div>(CICPPM1A)</div>
+                    <div>(CICSPTOR)</div>
+                    <div>(CONTROLD)</div>
+                    <div>(CICSFTOR)</div>
+                    <div>(SUPER)</div>
+                </div>
+            </div>
+            <div class="emulador_tipear">
+                <div>Tipear la Opcion =></div>
+                <div class="emulador_tipear_opcion">
+                    <input type="text" id="opcion">
+                </div>
+            </div>
+    </section>
+    <section class="ingresar">
+        <div class="ingresar_cabecera">
+            <div>0011 OUBB</div>
+            <div>ARQUITECTURA</div>
+        </div>
+        <div class="ingresar_texto">
+            <div class="ingresar_texto_izquierda">6347 CICSUSER</div>
+            <div class="ingresar_texto_derecha">INICIO DE SESION DE UN TERMINAL</div>
+        </div>
+        <div class="ingresar_usuario">
+            <div>- ID DE USUARIO (01 ) = </div>
+            <div class="ingresar_usuario_texto">
+                <input type="text" id="opcion">
+            </div>
+        </div>
+        <div class="ingresa_contrasenia">
+            <div>- PASSWORD (FC ) = </div>
+            <div class="ingresa_contrasenia_texto">
+                <input type="text" id="opcion">
+            </div>
+        </div>
+        <div class="ingresa_contrasenia">
+            <div>- NUEVA PASSWORD (FD ) = </div>
+            <div>
+                <input type="text" id="opcion">
+            </div>
+        </div>
+        <div class="ingresa_contrasenia">
+            <div>- VERIF. NUEVA PASSWORD (FE ) = </div>
+            <div>
+                <input type="text" id="opcion">
+            </div>
+        </div>
+        <div style="color: white;">
+            ---------------------------------------------------------------------------------------------------------------------------
+        </div>
+        <div>Esta transaccion permite al usuario identificarse e incluso cambiar su palabra clave</div>
+        <div class="ingresar_footer">
+            <div><span style="color: white;">F5</span><span style="color: blue;">Cajero B</span></div>
+            <div><span style="color: white;">F8</span><span style="color: blue;">Cajero A</span></div>
+            <div><span style="color: white;">BORRA</span><span style="color: blue;">Salir</span></div>
+        </div>
+    </section>
+    <section class="linea">
+        <div style="color: white;">-------------LINEAS DE PANTALLA------------</div>
+        <div>
+            <div>ENTIDAD: 0011</div>
+            <div>CENTRO: 6347</div>
+            <div>FECHA: 050225</div>
+            <div>TERMINAL: OUB8</div>
+            <div id="usuarioemulador">USUARIO: XP74987</div>
+            <div>*** TERMINAL CONECTADO A PRODUCCION ASTA 0502251647OUB8P</div>
+        </div>
+        <div id="aceptar" style="color: white;">OK</div>
+    </section>
+    <section class="bt55">
+        <div style="padding: 1em;">BANCA TELEFONICA</div>
+        <div style="color: white; padding: 1em;">CONSULTA DE TARJETAS X CLIENTE</div>
+        <div style="color: green; padding: 1em;">TARJETAS POR CLIENTE</div>
+        <div class="bt55_documento">
+            <div>TIP./NUM.DOC.:</div>
+            <div>
+                <input>
+            </div>
+        </div>
+        <div class="bt55_footer">
+            <div><span style="color: white;">IN</span>CONSUL.</div>
+            <div><span style="color: white;">F4</span>LIMPIA</div>
+            <div><span style="color: white;">CL</span>SALIR</div>
+        </div>
+    </section>
+    <section class="bt55_resultado">
+        <div>BANCA TELEFONICA</div>
+        <div style="color:white">RELACION DE TARJETAS X CLIENTE</div>
+        <div style="color: white;" class="bt55_resultado_cabecera">
+            <div>BTA0537 CLIENTE</div>
+            <div>ENCONTRADO</div>
+        </div>
+        <div class="bt55_resultado_datos">
+            <div>SALTO</div>
+            <div style="color: white;" id="codid">CLIENTE: L 47467409</div>
+            <div style="color: white;" id="codcli">30565649</div>
+        </div>
+        <div style="color: white;" class="bt55_resultado_titulo">
+            <div>NUMERO DE TARJETA</div>
+            <div>NOMBRE TITULAR</div>
+            <div>TIPO TJTA</div>
+        </div>
+        <div class="bt55_resultado_texto">
+            <div id="numtarjeta">4451-0383-3631-4484</div>
+            <div id="nombre">Angel David Veliz Mendoza</div>
+            <div id="tarjeta">ELECTRON PEN</div>
+        </div>
+        <div class="bt55_resultado_footer">
+            <span style="color: white;">F7</span>RE.PAG<span style="color: white;">F8</span>AV.PAG<span
+                style="color: white;">Cl</span>SALIR
+        </div>
+    </section>
+    <section class="mp12">
+        <div class="mp12_titulo">MEDIOS DE PAGO</div>
+        <div class="mp12_subtitulo">REPORTE DE ROBO O EXTRAVIO</div>
+        <div class="linea1">
+            <div>NUMERO TARJETA</div>
+            <div style="color: red;">446464654654654</div>
+            <div>TIPO</div>
+            <div style="color: red;">CREDITO</div>
+        </div>
+        <div class="linea2">
+            <div>NOMBRE TITULAR</div>
+            <div style="color: red;">ANGEL DAVID VELIZ MENDOZA</div>
+            <div>DCTO.IDENT.</div>
+            <div style="color: red;">47467409</div>
+        </div>
+        <div class="linea3">
+            <div>VENCIMIENTO</div>
+            <div style="color: red;">02/05/2026</div>
+            <div>EN RENOVACION</div>
+            <div style="color: red;">SI</div>
+        </div>
+        <div class="linea4">
+            <div>SITUACION TARJETA</div>
+            <div style="color: red;">EN TRAMITE</div>
+        </div>
+        <div class="linea5">
+            <div>CLAVE NOTIFICACION</div>
+            <div style="color: red;">ASDKALS</div>
+        </div>
+        <div class="linea6">
+            <div>NUMERO BLOQUEO</div>
+            <div style="color: red;">60114</div>
+        </div>
+        <div>__________________________________________________DATOS DEL
+            SUCESO_________________________________________________</div>
+        <div class="linea7">
+            <div>MOTIVO (AL/AS/CT/BC/AF/CX/AT)</div>
+            <div style="color: red;">RESPUESTA</div>
+            <div>FECHA</div>
+            <div style="color: red;">06/02/2025</div>
+            <div>HORA</div>
+            <div style="color: red;">1702</div>
+        </div>
+        <div class="linea8">
+            <div>NOMBRE QUIEN REPORTA</div>
+            <div style="color: red;">ANGEL VELIZ MENDOZA</div>
+        </div>
+        <div class="linea9">
+            <div>DESCRIPCION</div>
+            <div style="color: red;">BLOQUEO POR ROBO</div>
+        </div>
+        <div class="linea10">
+            <div>DEVUELTO POR</div>
+            <div style="color: red;">CARLOS VEGA APOLINARIO</div>
+        </div>
+        <div class="linea11">
+            <div>PAIS</div>
+            <div style="color: red;">PERU</div>
+        </div>
+        <div class="linea12">
+            <div>
+                <div>FECHA DENUNCIA POLICIA</div>
+                <div>SOLICITUD REPOSICION</div>
+                <div>COBRAR REPOSICION</div>
+                <div>TARJETA URGENTE</div>
+                <div>IND.OFIC.ENVIO(S/N):</div>
+                <div>IND.DIR.ENTREG(S/N):</div>
+            </div>
+            <div style="color: red;">
+                <div>RESPUESTA</div>
+                <div>RESPUESTA</div>
+                <div>RESPUESTA</div>
+                <div>RESPUESTA</div>
+                <div>S</div>
+                <div>S</div>
+            </div>
+            <div>
+                <div>OTROS DOCUMENTOS</div>
+                <div>RECIBIDA FOTOCOPIA</div>
+                <div>TARJ.EN PODER BANCO (C/E)</div>
+                <div>TARJ.URGENTE (S/N)</div>
+                <div>INHIBIR ESTAMP. (0/1/2)</div>
+                <div>IND.CLAVE TJ SMS (S/N)</div>
+                <div>DISE#O DE TARJETA :</div>
+            </div>
+            <div style="color: red;">
+                <div>RESPIESTA</div>
+                <div>RESPUESTA</div>
+                <div>C</div>
+                <div>S</div>
+                <div>0</div>
+                <div>S</div>
+                <div>NORMAL</div>
+            </div>
+        </div>
+        <div>
+            <span style="color: white;">IN</span>
+            INTRO
+            <span style="color: white;">F2</span>
+            MODIF
+            <span style="color: white;">F3</span>
+            ALTA
+            <span style="color: white;">14</span>
+            ANULAR
+            <span style="color: white;">16</span>
+            EXTMOD
+            <span style="color: white;">18</span>
+            IMPRIM
+            <span style="color: white;">CL</span>
+            SALIR
+        </div>
+    </section>
+    <section class="pebp">
+
+    </section>
+</body>
+
+</html>

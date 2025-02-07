@@ -23,16 +23,30 @@ function seleccionarDocumento() {
 
 /******************************************* */
 
-function mostrarTematico() {
-    const tematico = document.getElementById("tematico");
+function mostrarTematico() {  
+    const opcion1 = document.querySelectorAll('.tematico');  
+    const opcion2 = document.querySelectorAll('.harec');  
 
-    // Alternar visibilidad del elemento
-    if (tematico.style.display === "none" || tematico.style.display === "") {
-        tematico.style.display = "block"; // Muestra el elemento
+    // Verificar si las opciones existen
+    if (opcion1.length === 0 || opcion2.length === 0) {
+        console.error("No se encontraron elementos con las clases '.tematico' o '.harec'");
+        return;
+    }
+
+    // Obtener el estado de la primera opción (suponiendo que todas tienen el mismo estado)
+    const estadoActual = getComputedStyle(opcion1[0]).display;
+
+    if (estadoActual === "none") {
+        // Mostrar las opciones si están ocultas
+        opcion1.forEach(opcion => { opcion.style.display = "block"; });
+        opcion2.forEach(opcion => { opcion.style.display = "block"; });
     } else {
-        tematico.style.display = "none"; // Oculta el elemento
+        // Ocultar las opciones si están visibles
+        opcion1.forEach(opcion => { opcion.style.display = "none"; });
+        opcion2.forEach(opcion => { opcion.style.display = "none"; });
     }
 }
+
 
 /********************************* */
 function toggleContenido() {
@@ -434,7 +448,53 @@ iconos.forEach(icono => {
         icono.src = 'image/icono_cerrado.png';  // Establecer la imagen como cerrada
     });
 });
+/********************************************************* */
+let datos = [];
 
+async function cargarDatos() {
+    try {
+        const response = await fetch("data.json"); // Cargar archivo JSON externo
+        datos = await response.json();
+    } catch (error) {
+        console.error("Error al cargar data.json:", error);
+    }
+}
+
+// Llamar a la función de carga al iniciar
+cargarDatos();
+
+function buscarDatos() {
+    const codidInput = document.getElementById("codidInput").value;
+    const usuario = datos.find(user => user.codid === codidInput);
+
+    if (usuario) {
+        document.getElementById("codid").textContent = `DNI: ${usuario.codid}`;
+        document.getElementById("nombre").textContent = `NOMBRE: ${usuario.nombre}`;
+        document.getElementById("codcli").textContent = `COD. CLIENTE: ${usuario.codcli}`;
+        document.getElementById("segmento").textContent = `SEGMENTO: ${usuario.segmento}`;
+        document.getElementById("oficgestora").textContent = `OFIC. GESTORA ${usuario.oficgestora}`;
+        document.getElementById("direccion").textContent = `DIRECCION: ${usuario.direccion}`;
+        document.getElementById("celular").textContent = ` ${usuario.celular}`;
+        document.getElementById("estadoivr").textContent = ` ${usuario.estadoivr}`;
+        document.getElementById("tarjeta").textContent = ` ${usuario.tarjeta}`;
+        document.getElementById("moneda").textContent = ` ${usuario.moneda}`;
+        document.getElementById("numtarjeta").textContent = ` ${usuario.numtarjeta}`;
+        document.getElementById("estado").textContent = `${usuario.estado}`;
+        document.getElementById("estadocelular").textContent = `Celular: ${usuario.estadocelular}`;
+        document.getElementById("creditodispo").textContent = ` ${usuario.creditodispo}`;
+        document.getElementById("codbloqueo").textContent = ` ${usuario.codbloqueo}`;
+        document.getElementById("correo").textContent = `${usuario.correo}`;
+        document.getElementById("movfecha1").textContent = ` ${usuario.movfecha1}`;
+        document.getElementById("movnombre1").textContent = ` ${usuario.movnombre1}`;
+        document.getElementById("movcantidad1").textContent = ` ${usuario.movcantidad1}`;
+    } else {
+        alert("Código no encontrado.");
+    }
+}
+
+
+
+/********************************************************** */
 document.addEventListener("DOMContentLoaded", function() {
     const inactivo = document.querySelector(".inactivo_banca");
     const activo = document.querySelector(".activo_banca");

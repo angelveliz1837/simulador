@@ -1,0 +1,248 @@
+body{
+    background-color: black;
+    color: green;
+}
+
+.emulador{
+    padding: 5em;
+}
+
+.emulador_barra{
+    text-align: center;
+    padding: 1em;
+    margin: 0em 10em;
+    background-color: green;
+}
+
+.emulador_texto{
+    margin: 0em 5em;
+}
+
+.emulador_titulo{
+    margin: 0em 5em;
+}
+
+.emulador_titulo_texto{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    background-color: yellow;
+    margin: 1em 0em;
+    text-align: center;
+}
+
+.emulador_titulo_cuadro{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+}
+
+.emulador_titulo_cuadro_alternativas{
+    color: yellow;
+}
+
+.emulador_titulo_cuadro_descripcion{
+    color: white;
+    text-align: start;
+    padding-left: 8em;
+}
+
+.emulador_titulo_cuadro_siglas{
+    color: yellow;
+    text-align: start;
+    padding-left: 8em;
+}
+
+.emulador_tipear{
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+}
+
+.emulador_tipear div{
+    margin: 0.5em;
+}
+
+.emulador_tipear_opcion input{
+    text-decoration: none;
+    color: yellow;
+    background-color: black;
+}
+
+.ingresar{
+    display: flex;
+    flex-direction: column;
+    color: blue;
+    margin: 15em;
+}
+
+.ingresar_cabecera{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 1em;
+}
+
+.ingresar_texto{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 1em;
+}
+
+.ingresar_usuario{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 1em;
+}
+
+.ingresa_contrasenia{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 1em;
+}
+
+.ingresar_footer{
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    padding: 1em;
+}
+
+.linea{
+    color: blue;
+    margin: 10em;
+}
+
+.bt55{
+    color: blue;
+    margin: 10em;
+    text-align: center;
+}
+
+.bt55_documento{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5em;
+    padding-left: 27em;
+}
+
+.bt55_footer{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    padding: 4em;
+}
+
+.bt55_resultado{
+    color: blue;
+    text-align: center;
+    margin: 10em;
+}
+
+.bt55_resultado_cabecera{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 1em;
+}
+
+.bt55_resultado_datos{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 1em;
+}
+
+.bt55_resultado_titulo{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 1em;
+}
+
+.bt55_resultado_texto{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 1em;
+}
+
+.bt55_resultado_footer{
+    padding-left: 40em;
+    padding-top: 2em;
+}
+
+.mp12{
+    display: flex;
+    flex-direction: column;
+    color: blue;
+    margin: 10em;
+}
+
+.mp12_titulo{
+    text-align: center;
+}
+
+.mp12_subtitulo{
+    text-align: center;
+    color: white;
+    padding: 1em;
+}
+
+.linea1{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea2{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea3{
+    display: grid;
+    grid-template-columns: 25% 10% 20% 45%;
+}
+
+.linea4{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea5{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea6{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea7{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea8{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea9{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea10{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea11{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea12{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.linea13{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+

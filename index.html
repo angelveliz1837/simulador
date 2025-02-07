@@ -23,12 +23,14 @@
                 </div>
             </div>
         </div>
-        <div class="navegador_dni_numero">123456789</div>
-        <div class="navegador_icono_buscar">
+        <div class="navegador_dni_numero">
+            <input type="text" id="codidInput" placeholder="12345678">
+        </div>
+        <div class="navegador_icono_buscar" onclick="buscarDatos()">
             <img src="image/icono_buscar.svg" alt="buscador">
         </div>
         <div class="navegador_detalle">
-            <div class="navegador_detalle_texto">Ingreso por robo</div>
+            <div id="estadoivr" class="navegador_detalle_texto">Bloqueo por robo</div>
         </div>
         <div class="navegador_tiempo">00:00</div>
         <div class="navegador_candado">
@@ -41,11 +43,14 @@
             <img src="image/icono_logo.svg" alt="logo">
         </div>
         <div class="navegador_tipificar">
-            <div class="icono_menu" onclick="mostrarTematico()">
+            <div id="icono_menu" class="icono_menu" onclick="mostrarTematico()">
                 <img src="image/icono_menu.svg" alt="menu">
             </div>
             <div class="tematico" id="tematico" style="display: none;">
                 Tematico
+            </div>
+            <div class="harec" id="harec" style="display: none;">
+                Harec
             </div>
         </div>
     </section>
@@ -66,14 +71,14 @@
                             </div>
                         </div>
                         <div class="cajas_caja_personal_dato_contenido_detalle1">
-                            <h3>NOMBRE: ANGEL VELIZ MENDOZA</h3>
-                            <h3>DNI: 47467409</h3>
-                            <h3>COD. CLIENTE: 12345678</h3>
-                            <h3>SEGMENTO: RETAIL</h3>
+                            <h3 id="nombre">NOMBRE: ANGEL VELIZ MENDOZA</h3>
+                            <h3 id="codid">DNI: 12345678</h3>
+                            <h3 id="codcli">COD. CLIENTE: 12345678</h3>
+                            <h3 id="segmento">SEGMENTO: RETAIL</h3>
                         </div>
                         <div class="cajas_caja_personal_dato_contenido_detalle2">
                             <h3>PUNTOS VIDA: -</h3>
-                            <h3>OFIC. GESTORA: 0199</h3>
+                            <h3 id="oficgestora">OFIC. GESTORA: 0199</h3>
                         </div>
                         <div class="cajas_caja_personal_dato_contenido_boton">
                             <div class="cajas_caja_personal_dato_contenido_boton_texto">
@@ -87,9 +92,10 @@
                     <div class="cajas_caja_personal_contacto_titulo">
                         <h1>Datos De Contacto</h1>
                     </div>
-                    <div class="cajas_caja_personal_contacto_direccion">DIRECCION: Jr Junin 3739 SMP LIMA</div>
+                    <div id="direccion" class="cajas_caja_personal_contacto_direccion">DIRECCION: Jr Junin 3739 SMP LIMA
+                    </div>
                     <div class="cajas_caja_personal_contacto_telefono">
-                        <img src="image/icono_telefono.png" alt="telefono"> 951658060
+                        <img src="image/icono_telefono.png" alt="telefono"> <span id="celular">951658060</span>
                     </div>
                 </div>
                 <div class="cajas_caja_personal_historial">
@@ -146,22 +152,28 @@
                     PREPAGO
                 </div>
             </div>
-            <div class="cajas_caja_navegador_interno_detalle">
-                <div class="cajas_caja_navegador_interno_detalle_datos">
-                    <div class="cajas_caja_navegador_interno_detalle_datos_tarjeta">CREDITO VISA SINGATURA PEN</div>
-                    <div class="cajas_caja_navegador_interno_detalle_datos_numero">.9710</div>
-                    <div class="cajas_caja_navegador_interno_detalle_datos_bloqueo">APAGADA X BANCA MOVIL</div>
-                </div>
-                <div class="cajas_caja_navegador_interno_detalle_activacion">
-                    <div class="cajas_caja_navegador_interno_detalle_activacion_moneda">s/</div>
-                    <div class="cajas_caja_navegador_interno_detalle_activacion_estado">ACTIVA</div>
-                </div>
-                <div class="cajas_caja_navegador_interno_detalle_boton">
-                    <div class="cajas_caja_navegador_interno_detalle_boton_enlazar">
-                        <div class="quiero2" onclick="mostrarOpciones()">Quiero</div>
-                        <div class="detalles" onclick="mostrarDetalle()">Detalles</div>
-                        <div class="bloqueos" onclick="mostrarBloqueo()">Bloqueos</div>
-                        <div class="movimientos" onclick="mostrarMovimiento()">Movimientos</div>
+            <div class="cajas_caja_navegador_interno_detalle_contenedor">
+                <div class="cajas_caja_navegador_interno_detalle">
+                    <div class="cajas_caja_navegador_interno_detalle_datos">
+                        <div id="tarjeta" class="cajas_caja_navegador_interno_detalle_datos_tarjeta">CREDITO VISA
+                            SINGATURA
+                            PEN</div>
+                        <div id="numtarjeta" class="cajas_caja_navegador_interno_detalle_datos_numero">.9710</div>
+                        <div id="estadocelular" class="cajas_caja_navegador_interno_detalle_datos_bloqueo">APAGADA X
+                            BANCA
+                            MOVIL</div>
+                    </div>
+                    <div class="cajas_caja_navegador_interno_detalle_activacion">
+                        <div id="moneda" class="cajas_caja_navegador_interno_detalle_activacion_moneda">s/</div>
+                        <div id="estado" class="cajas_caja_navegador_interno_detalle_activacion_estado">ACTIVA</div>
+                    </div>
+                    <div class="cajas_caja_navegador_interno_detalle_boton">
+                        <div class="cajas_caja_navegador_interno_detalle_boton_enlazar">
+                            <div class="quiero2" onclick="mostrarOpciones()">Quiero</div>
+                            <div class="detalles" onclick="mostrarDetalle()">Detalles</div>
+                            <div class="bloqueos" onclick="mostrarBloqueo()">Bloqueos</div>
+                            <div class="movimientos" onclick="mostrarMovimiento()">Movimientos</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,7 +184,8 @@
                     <h1>DETALLE DE LA TARJETA DE CRÉDITO</h1>
                 </div>
                 <div class="cajas_caja_credito_principal">
-                    <div class="cajas_caja_credito_principal_nombre">NOMBRE EN TARJETA: ANGEL VELIZ MENDOZA</div>
+                    <div id="nombre" class="cajas_caja_credito_principal_nombre">NOMBRE EN TARJETA: ANGEL VELIZ MENDOZA
+                    </div>
                     <div class="cajas_caja_credito_principal_boton">
                         <div class="cajas_caja_credito_principal_boton_menu">Quiero</div>
                     </div>
@@ -186,7 +199,7 @@
                         <div class="cajas_caja_credito_datos_bloque1_texto">EECC FÍSICO:</div>
                     </div>
                     <div class="cajas_caja_credito_datos_bloque2">
-                        <div class="cajas_caja_credito_datos_bloque2_texto">.3636</div>
+                        <div id="tarjeta" class="cajas_caja_credito_datos_bloque2_texto">.3636</div>
                         <div class="cajas_caja_credito_datos_bloque2_texto">PEN</div>
                         <div class="cajas_caja_credito_datos_bloque2_texto">06/03/2023</div>
                         <div class="cajas_caja_credito_datos_bloque2_texto">30/06/2023</div>
@@ -201,7 +214,7 @@
                     </div>
                     <div class="cajas_caja_credito_dato_bloque4">
                         <div class="cajas_caja_credito_dato_bloque4_texto">0011-0408-5006485839</div>
-                        <div class="cajas_caja_credito_dato_bloque4_texto">BLOQUEADO</div>
+                        <div id="estado" class="cajas_caja_credito_dato_bloque4_texto">BLOQUEADO</div>
                         <div class="cajas_caja_credito_dato_bloque4_texto">14/09/2021</div>
                         <div class="cajas_caja_credito_dato_bloque4_texto">24/06/2021</div>
                         <div class="cajas_caja_credito_dato_bloque4_texto">-</div>
@@ -220,7 +233,7 @@
                     </div>
                     <div class="cajas_caja_credito_resultado_bloque2">
                         <div class="cajas_caja_credito_resultado_bloque2_texto">S/ 90,000.00</div>
-                        <div class="cajas_caja_credito_resultado_bloque2_texto">S/ 47,158.30</div>
+                        <div id="creditodispo" class="cajas_caja_credito_resultado_bloque2_texto">S/ 47,158.30</div>
                         <div class="cajas_caja_credito_resultado_bloque2_texto">S/ 42,841.69</div>
                     </div>
                 </div>
@@ -262,7 +275,7 @@
                         <div class="cajas_caja_bloqueo_bloque1_texto">ESTADO:</div>
                     </div>
                     <div class="cajas_caja_bloqueo_bloque2">
-                        <div class="cajas_caja_bloqueo_bloque2_texto">.9710</div>
+                        <div id="numtarjeta" class="cajas_caja_bloqueo_bloque2_texto">.9710</div>
                         <div class="cajas_caja_bloqueo_bloque2_texto">ACTIVA</div>
                     </div>
                     <div class="cajas_caja_bloqueo_bloque3">
@@ -357,10 +370,10 @@
                             <div class="cajas_caja_correo_constancia_detalle_bloque1_texto">NÚMERO DE OPERACIÓN:</div>
                         </div>
                         <div class="cajas_caja_correo_constancia_detalle_bloque2">
-                            <div class="cajas_caja_correo_constancia_detalle_bloque2_texto">.9710</div>
-                            <div class="cajas_caja_correo_constancia_detalle_bloque2_texto">BLOQUEADA</div>
+                            <div id="numtarjeta" class="cajas_caja_correo_constancia_detalle_bloque2_texto">.9710</div>
+                            <div id="estado" class="cajas_caja_correo_constancia_detalle_bloque2_texto">BLOQUEADA</div>
                             <div class="cajas_caja_correo_constancia_detalle_bloque2_texto">CANCELACION POR ROBO</div>
-                            <div class="cajas_caja_correo_constancia_detalle_bloque2_texto">11856</div>
+                            <div id="codbloqueo" class="cajas_caja_correo_constancia_detalle_bloque2_texto">11856</div>
                         </div>
                         <div class="cajas_caja_correo_constancia_detalle_bloque3">
                             <div class="cajas_caja_correo_constancia_detalle_bloque3_texto">DIVISA:</div>
@@ -387,7 +400,8 @@
                         </div>
                         <div class="cajas_caja_correo_envio_contenido_texto">
                             <div class="cajas_caja_correo_envio_contenido_texto_email">Email</div>
-                            <div class="cajas_caja_correo_envio_contenido_texto_correo">angel@gmail.com</div>
+                            <div id="correo" class="cajas_caja_correo_envio_contenido_texto_correo">angel@gmail.com
+                            </div>
                         </div>
                         <div class="cajas_caja_correo_envio_contenido_boton">
                             <div class="cajas_caja_correo_envio_contenido_boton_enviar">Enviar</div>
@@ -478,13 +492,13 @@
                     </div>
                 </div>
                 <div class="cajas_caja_movimiento_lista">
-                    <div class="cajas_caja_movimiento_lista_texto">
+                    <div id="movfecha1" class="cajas_caja_movimiento_lista_texto">
                         01/01/2022
                     </div>
-                    <div class="cajas_caja_movimiento_lista_texto">
+                    <div id="movnombre1" class="cajas_caja_movimiento_lista_texto">
                         MANUEL
                     </div>
-                    <div class="cajas_caja_movimiento_lista_texto">
+                    <div id="movcantidad1" class="cajas_caja_movimiento_lista_texto">
                         - S/ 270.00
                     </div>
                 </div>
