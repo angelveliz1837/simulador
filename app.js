@@ -1,3 +1,23 @@
+// Función para iniciar el temporizador
+document.addEventListener("DOMContentLoaded", function () {
+    function iniciarTemporizador() {
+        let segundos = 0;
+        const navegadorTiempo = document.querySelector(".navegador_tiempo");
+
+        setInterval(() => {
+            segundos++;
+            let minutos = Math.floor(segundos / 60);
+            let segundosRestantes = segundos % 60;
+            navegadorTiempo.textContent = `${String(minutos).padStart(2, "0")}:${String(segundosRestantes).padStart(2, "0")}`;
+        }, 1000);
+    }
+
+    iniciarTemporizador();
+});
+
+// Iniciar temporizador
+iniciarTemporizador();
+
 function toggleComboBox() {
     const combo = document.getElementById("comboDocumento");
     const dniDiv = document.querySelector(".navegador_documento_extra_dni");
