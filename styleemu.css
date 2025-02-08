@@ -246,3 +246,100 @@ body{
     grid-template-columns: 25% 25% 25% 25%;
 }
 
+.pebp{
+    margin: 10em;
+    color: blue;
+}
+
+.pebp_centrar{
+    text-align: center;
+}
+
+.pebp_opciones{
+    padding-left: 25em;
+}
+
+.pebp_datos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.pebp_datos_agregar{
+    padding-left: 25em;
+}
+
+.pebp_datos_respuesta{
+    color: red;
+}
+
+.kto1{
+    margin: 10em;
+    color: blue;
+}
+
+.kto1_centrar{
+    text-align: center;
+}
+
+.kto1_datos{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 1em;
+}
+
+.kto1_line1{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 1em;
+}
+
+.kto1_line2{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 1em;
+}
+
+.kto1_line3{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 1em;
+}
+
+.kto1_line4{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 1em;
+}
+
+.kto1_line5{
+    display: grid;
+    grid-template-columns: 15% 20% 15% 15% 15% 15%;
+}
+
+.kto1_line6{
+    display: grid;
+    grid-template-columns: 15% 20% 15% 15% 15% 15%;
+    padding: 1em;
+}
+
+.kto1_line7{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.kto1_line8{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 1em;
+}
+
+.kto1_line9{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 1em;
+}
+
+.anadir{
+    width: 100%;
+    margin: 15em;
+}

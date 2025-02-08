@@ -60,7 +60,7 @@
                 </div>
             </div>
     </section>
-    <section class="ingresar">
+    <section class="ingresar" style="display: none;">
         <div class="ingresar_cabecera">
             <div>0011 OUBB</div>
             <div>ARQUITECTURA</div>
@@ -72,25 +72,25 @@
         <div class="ingresar_usuario">
             <div>- ID DE USUARIO (01 ) = </div>
             <div class="ingresar_usuario_texto">
-                <input type="text" id="opcion">
+                <input type="text">
             </div>
         </div>
         <div class="ingresa_contrasenia">
             <div>- PASSWORD (FC ) = </div>
             <div class="ingresa_contrasenia_texto">
-                <input type="text" id="opcion">
+                <input type="text">
             </div>
         </div>
         <div class="ingresa_contrasenia">
             <div>- NUEVA PASSWORD (FD ) = </div>
             <div>
-                <input type="text" id="opcion">
+                <input type="text">
             </div>
         </div>
         <div class="ingresa_contrasenia">
             <div>- VERIF. NUEVA PASSWORD (FE ) = </div>
             <div>
-                <input type="text" id="opcion">
+                <input type="text">
             </div>
         </div>
         <div style="color: white;">
@@ -103,7 +103,7 @@
             <div><span style="color: white;">BORRA</span><span style="color: blue;">Salir</span></div>
         </div>
     </section>
-    <section class="linea">
+    <section class="linea" style="display: none;">
         <div style="color: white;">-------------LINEAS DE PANTALLA------------</div>
         <div>
             <div>ENTIDAD: 0011</div>
@@ -115,7 +115,10 @@
         </div>
         <div id="aceptar" style="color: white;">OK</div>
     </section>
-    <section class="bt55">
+    <section class="anadir" style="display: none;">
+        <input>
+    </section>
+    <section class="bt55" style="display: none;">
         <div style="padding: 1em;">BANCA TELEFONICA</div>
         <div style="color: white; padding: 1em;">CONSULTA DE TARJETAS X CLIENTE</div>
         <div style="color: green; padding: 1em;">TARJETAS POR CLIENTE</div>
@@ -131,7 +134,7 @@
             <div><span style="color: white;">CL</span>SALIR</div>
         </div>
     </section>
-    <section class="bt55_resultado">
+    <section class="bt55_resultado" style="display: none;">
         <div>BANCA TELEFONICA</div>
         <div style="color:white">RELACION DE TARJETAS X CLIENTE</div>
         <div style="color: white;" class="bt55_resultado_cabecera">
@@ -158,7 +161,7 @@
                 style="color: white;">Cl</span>SALIR
         </div>
     </section>
-    <section class="mp12">
+    <section class="mp12" style="display: none;">
         <div class="mp12_titulo">MEDIOS DE PAGO</div>
         <div class="mp12_subtitulo">REPORTE DE ROBO O EXTRAVIO</div>
         <div class="linea1">
@@ -270,9 +273,112 @@
             SALIR
         </div>
     </section>
-    <section class="pebp">
-
+    <section class="pebp" style="display: none;">
+        <div class="pebp_centrar">GESTION DE CANAL</div>
+        <div class="pebp_centrar" style="color: white;">MENU PRINCIPAL OPERACIONES FRECUEN</div>
+        <div class="pebp_opciones">
+            <h5>1.- DATOS DE AFILIACION</h5>
+            <h5>2.- AVISOS Y ALERTAS</h5>
+            <h5>3.- INFOMAIL - EECC</h5>
+            <h5>4.- INFOMAIL - REPORTE DE MOVIMIENTOS</h5>
+            <h5>5.- OPERACIONES FRECUENTES</h5>
+            <h5>6.- BANCA MOVIL</h5>
+            <h5>7.- CLAVE SMS</h5>
+        </div>
+        <div class="pebp_datos">
+            <div class="pebp_datos_agregar">
+                <div>OPCION:</div>
+                <div>NUMERO DE DOCUMENTO:</div>
+                <div>NUMERO DE TELEFONO:</div>
+            </div>
+            <div class="pebp_datos_respuesta">
+                <div>7</div>
+                <div>l-47467409</div>
+                <div>951658060</div>
+            </div>
+        </div>
+        <div style="text-align: center;"><span style="color: white;">IN</span>INTO<span
+                style="color: white;">CL</span>SALIR</div>
+    </section>
+    <section class="kto1" style="display: none;">
+        <div class="kto1_centrar">PERSONAS</div>
+        <div class="kto1_centrar" style="color: white;">CONSULTA/ACTUALIZ.DATOS</div>
+        <div class="kto1_centrar">DIRECCION/TELEFONO/EMAIL</div>
+        <div class="kto1_datos">
+            <div>
+                <div>CLIENTE:</div>
+                <div>DCTO.IDENT:</div>
+                <div>NOMBRE(S):</div>
+                <div>APELLIDO PATERNO</div>
+                <div>APELLIDO MATERNO:</div>
+            </div>
+            <div style="color: red;">
+                <div>30525351</div>
+                <div>l47467409</div>
+                <div>ANGEL</div>
+                <div>VELIZ</div>
+                <div>MENDOZA</div>
+            </div>
+        </div>
+        <div class="kto1_line1">
+            <div>DIRECCION:</div>
+            <div style="color: red;">JR JUNIN 3739</div>
+        </div>
+        <div class="kto1_line2">
+            <div>NRO EXT/INT:</div>
+            <div style="color: red;">3739</div>
+            <div>UBIC.:</div>
+            <div style="color: red;">SMP</div>
+        </div>
+        <div class="kto1_line3">
+            <div>REFERENCIA</div>
+            <div style="color: red;">A LA ESPALDA DE LA AV PERU CDRA 37</div>
+        </div>
+        <div class="kto1_line4">
+            <div>ESTD/DTOP</div>
+            <div style="color: red;">LIMA</div>
+            <div>PAIS...:</div>
+            <div style="color: red;">PERU</div>
+        </div>
+        <div class="kto1_line5">
+            <div>DISTRITO:</div>
+            <div style="color: red;">SAN MARTIN DE PORRES</div>
+            <div>C.POSTAL:</div>
+            <div style="color: red;">001</div>
+            <div>DIS/PRD:</div>
+            <div style="color: red;">DIS</div>
+        </div>
+        <div class="kto1_line6">
+            <div>TIPO DOM..:</div>
+            <div style="color: red;">NORMAL</div>
+            <div>F.RESID:</div>
+            <div style="color: red;">F</div>
+            <div>RELAC.DOM:</div>
+            <div style="color: red;">RESPUESTA</div>
+        </div>
+        <div class="kto1_line7">
+            <div>TIPO TEL.</div>
+            <div>PREFIJO</div>
+            <div>NUMERO TEL.</div>
+            <div>EXTENSION</div>
+        </div>
+        <div class="kto1_line8" style="color: green;">
+            <div>.</div>
+            <div>001</div>
+            <div>951658060</div>
+            <div>0001</div>
+        </div>
+        <div class="kto1_line9">
+            <div>EMAIL:</div>
+            <div style="color: red;">ANGELVELIZ1837@GMAIL.COM</div>
+        </div>
+        <div>
+            <span style="color: white;">IN</span>INTRO
+            <span style="color: white;">F2</span>MODIF
+            <span style="color: white;">F4</span>LIMP
+        </div>
     </section>
 </body>
+<script src="script.js"></script>
 
 </html>
