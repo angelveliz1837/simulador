@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     iniciarTemporizador();
 });
 
-// Iniciar temporizador
-iniciarTemporizador();
+
 
 function toggleComboBox() {
     const combo = document.getElementById("comboDocumento");
@@ -568,3 +567,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Iniciar temporizador
+iniciarTemporizador();
