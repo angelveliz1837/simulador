@@ -421,6 +421,15 @@ function validarTarjeta() {
     if (autenticar) autenticar.style.display = "none";
 }
 
+// Función para abrir la sección tipificar
+function abrirTipificar() {
+    document.getElementById('tipificar').style.display = 'block';
+}
+
+// Función para cerrar la sección tipificar
+function cerrarTipificar() {
+    document.getElementById('tipificar').style.display = 'none';
+}
 
 /****************** ASIGNACIÓN DE EVENTOS ******************/
 

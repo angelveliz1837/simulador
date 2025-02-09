@@ -46,7 +46,7 @@
             <div id="icono_menu" class="icono_menu" onclick="mostrarTematico()">
                 <img src="image/icono_menu.svg" alt="menu">
             </div>
-            <div class="tematico" id="tematico" style="display: none;">
+            <div class="tematico" id="tematico" style="display: none;" onclick="abrirTipificar()">
                 Tematico
             </div>
             <div class="harec" id="harec" style="display: none;">
@@ -647,6 +647,15 @@
                     <div class="acepbloqueo_contenido_texto_boton_afirmacion_si">Si</div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="tipificar" id="tipificar">
+        <div class="tipificar_cerrar" onclick="cerrarTipificar()">
+            Escribe aqui la tipificación:
+            <img src="image/icono_cerrar.svg" alt="cerrar">
+        </div>
+        <div class="tipificar_texto">
+            <textarea rows="5" cols="30"></textarea>
         </div>
     </section>
 </body>

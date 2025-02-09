@@ -951,6 +951,27 @@
     padding: 1.5em;
 }
 
+.tipificar {
+    position: fixed; /* Fija la sección en la pantalla */
+    top: 50%; /* Posiciona al 50% desde la parte superior */
+    left: 50%; /* Posiciona al 50% desde la parte izquierda */
+    transform: translate(-50%, -50%); /* Ajusta el desplazamiento para centrar completamente */
+    background-color: white; /* Fondo blanco para que sea visible */
+    padding: 20em; /* Espaciado dentro del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Mantiene oculto al principio */
+    background-color: green;
+}
+
+.tipificar_cerrar img{
+    text-align: end;
+}
+
+.tipificar_texto input{
+    font-size: 2em;
+}
+
 /***************************************************/
 .navegador_documento_extra {
     position: relative;
